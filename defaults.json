@@ -1,0 +1,370 @@
+{
+  "authentication": {
+    "cookies": {
+      "default": null,
+      "description": "File to load additional cookies from"
+    },
+    "cookies-export": {
+      "default": null,
+      "description": "Export session cookies to FILE"
+    },
+    "cookies-from-browser": {
+      "default": null,
+      "description": "Name of the browser to load cookies from, with optional domain prefixed with '/', keyring name prefixed with '+', profile prefixed with ':', and container prefixed with '::' ('none' for no container (default), 'all' for all containers)"
+    },
+    "netrc": {
+      "default": false,
+      "description": "Enable .netrc authentication data"
+    },
+    "password": {
+      "default": null,
+      "description": "Password belonging to the given username"
+    },
+    "username": {
+      "default": null,
+      "description": "Username to login with"
+    }
+  },
+  "download": {
+    "abort": {
+      "default": null,
+      "description": "Stop current extractor(s) after N consecutive file downloads were skipped. Specify a TARGET to set how many levels to ascend or to which subcategory to jump to. Examples: '-A 3', '-A 3:2', '-A 3:manga'"
+    },
+    "chapter-filter": {
+      "default": null,
+      "description": "Like '--filter', but applies to manga chapters and other delegated URLs"
+    },
+    "chapter-range": {
+      "default": null,
+      "description": "Like '--range', but applies to manga chapters and other delegated URLs"
+    },
+    "chunk-size": {
+      "default": "32k",
+      "description": "Size of in-memory data chunks"
+    },
+    "clear-cache": {
+      "default": null,
+      "description": "Delete cached login sessions, cookies, etc. for MODULE (ALL to delete everything)"
+    },
+    "compat": {
+      "default": false,
+      "description": "Restore legacy 'category' names"
+    },
+    "config": {
+      "default": null,
+      "description": "Additional configuration files"
+    },
+    "config-create": {
+      "default": false,
+      "description": "Create a basic configuration file"
+    },
+    "config-ignore": {
+      "default": false,
+      "description": "Do not read default configuration files"
+    },
+    "config-open": {
+      "default": false,
+      "description": "Open configuration file in external application"
+    },
+    "config-status": {
+      "default": false,
+      "description": "Show configuration file status"
+    },
+    "config-toml": {
+      "default": null,
+      "description": "Additional configuration files in TOML format"
+    },
+    "config-yaml": {
+      "default": null,
+      "description": "Additional configuration files in YAML format"
+    },
+    "destination": {
+      "default": null,
+      "description": "Target location for file downloads"
+    },
+    "directory": {
+      "default": null,
+      "description": "Exact location for file downloads"
+    },
+    "download-archive": {
+      "default": null,
+      "description": "Record successfully downloaded files in FILE and skip downloading any file already in it"
+    },
+    "extractors": {
+      "default": null,
+      "description": "Load external extractors from PATH"
+    },
+    "filename": {
+      "default": null,
+      "description": "Filename format string for downloaded files ('/O' for \"original\" filenames)"
+    },
+    "filesize-max": {
+      "default": null,
+      "description": "Do not download files larger than SIZE (e.g. 500k or 2.5M)"
+    },
+    "filesize-min": {
+      "default": null,
+      "description": "Do not download files smaller than SIZE (e.g. 500k or 2.5M)"
+    },
+    "filter": {
+      "default": null,
+      "description": "Python expression controlling which files to download. Files for which the expression evaluates to False are ignored. Available keys are the filename-specific ones listed by '-K'. Example: --filter \"image_width >= 1000 and rating in ('s', 'q')\""
+    },
+    "force-ipv4": {
+      "default": false,
+      "description": "Make all connections via IPv4"
+    },
+    "force-ipv6": {
+      "default": false,
+      "description": "Make all connections via IPv6"
+    },
+    "help": {
+      "default": "==SUPPRESS==",
+      "description": "Print this help message and exit"
+    },
+    "http-timeout": {
+      "default": 30.0,
+      "description": "Timeout for HTTP connections"
+    },
+    "input-file": {
+      "default": [],
+      "description": "Download URLs found in FILE ('-' for stdin). More than one --input-file can be specified"
+    },
+    "input-file-comment": {
+      "default": null,
+      "description": "Download URLs found in FILE. Comment them out after they were downloaded successfully."
+    },
+    "input-file-delete": {
+      "default": null,
+      "description": "Download URLs found in FILE. Delete them after they were downloaded successfully."
+    },
+    "limit-rate": {
+      "default": null,
+      "description": "Maximum download rate (e.g. 500k, 2.5M, or 800k-2M)"
+    },
+    "no-check-certificate": {
+      "default": false,
+      "description": "Disable HTTPS certificate validation"
+    },
+    "no-download": {
+      "default": false,
+      "description": "Do not download any files"
+    },
+    "no-input": {
+      "default": false,
+      "description": "Do not prompt for passwords/tokens"
+    },
+    "no-mtime": {
+      "default": false,
+      "description": "Do not set file modification times according to Last-Modified HTTP response headers"
+    },
+    "no-part": {
+      "default": false,
+      "description": "Do not use .part files"
+    },
+    "no-skip": {
+      "default": false,
+      "description": "Do not skip downloads; overwrite existing files"
+    },
+    "option": {
+      "default": [],
+      "description": "Additional options. Example: -o browser=firefox"
+    },
+    "proxy": {
+      "default": null,
+      "description": "Use the specified proxy"
+    },
+    "range": {
+      "default": null,
+      "description": "Index range(s) specifying which files to download. These can be either a constant value, range, or slice (e.g. '5', '8-20', or '1:24:3')"
+    },
+    "retries": {
+      "default": 4,
+      "description": "Maximum number of retries for failed HTTP requests or -1 for infinite retries"
+    },
+    "sleep": {
+      "default": null,
+      "description": "Number of seconds to wait before each download. This can be either a constant value or a range (e.g. 2.7 or 2.0-3.5)"
+    },
+    "sleep-429": {
+      "default": null,
+      "description": "Number of seconds to wait when receiving a '429 Too Many Requests' response"
+    },
+    "sleep-extractor": {
+      "default": null,
+      "description": "Number of seconds to wait before starting data extraction for an input URL"
+    },
+    "sleep-request": {
+      "default": null,
+      "description": "Number of seconds to wait between HTTP requests during data extraction"
+    },
+    "source-address": {
+      "default": null,
+      "description": "Client-side IP address to bind to"
+    },
+    "terminate": {
+      "default": null,
+      "description": "Stop current & parent extractors and proceed with the next input URL after N consecutive file downloads were skipped"
+    },
+    "update-check": {
+      "default": false,
+      "description": "Check if a newer version is available"
+    },
+    "user-agent": {
+      "default": null,
+      "description": "User-Agent request header"
+    },
+    "version": {
+      "default": "==SUPPRESS==",
+      "description": "Print program version and exit"
+    }
+  },
+  "output": {
+    "Print": {
+      "default": null,
+      "description": "Like --print, but downloads files as well"
+    },
+    "Print-to-file": {
+      "default": null,
+      "description": "Like --print-to-file, but downloads files as well"
+    },
+    "dump-json": {
+      "default": null,
+      "description": "Print JSON information"
+    },
+    "error-file": {
+      "default": null,
+      "description": "Add input URLs which returned an error to FILE"
+    },
+    "extractor-info": {
+      "default": false,
+      "description": "Print extractor defaults and settings"
+    },
+    "get-urls": {
+      "default": null,
+      "description": "Print URLs instead of downloading"
+    },
+    "list-extractors": {
+      "default": null,
+      "description": "Print a list of extractor classes with description, (sub)category and example URL"
+    },
+    "list-keywords": {
+      "default": false,
+      "description": "Print a list of available keywords and example values for the given URLs"
+    },
+    "list-modules": {
+      "default": false,
+      "description": "Print a list of available extractor modules"
+    },
+    "no-colors": {
+      "default": false,
+      "description": "Do not emit ANSI color codes in output"
+    },
+    "print": {
+      "default": [],
+      "description": "Write FORMAT during EVENT (default 'prepare') to standard output instead of downloading files. Can be used multiple times. Examples: 'id' or 'post:{md5[:8]}'"
+    },
+    "print-to-file": {
+      "default": null,
+      "description": "Append FORMAT during EVENT to FILE instead of downloading files. Can be used multiple times"
+    },
+    "print-traffic": {
+      "default": false,
+      "description": "Display sent and read HTTP traffic"
+    },
+    "quiet": {
+      "default": false,
+      "description": "Activate quiet mode"
+    },
+    "resolve-json": {
+      "default": false,
+      "description": "Print JSON information; resolve intermediary URLs"
+    },
+    "resolve-urls": {
+      "default": false,
+      "description": "Print URLs instead of downloading; resolve intermediary URLs"
+    },
+    "simulate": {
+      "default": false,
+      "description": "Simulate data extraction; do not download anything"
+    },
+    "verbose": {
+      "default": false,
+      "description": "Print various debugging information"
+    },
+    "warning": {
+      "default": false,
+      "description": "Print only warnings and errors"
+    },
+    "write-log": {
+      "default": null,
+      "description": "Write logging output to FILE"
+    },
+    "write-pages": {
+      "default": false,
+      "description": "Write downloaded intermediary pages to files in the current directory to debug problems"
+    },
+    "write-unsupported": {
+      "default": null,
+      "description": "Write URLs, which get emitted by other extractors but cannot be handled, to FILE"
+    }
+  },
+  "post-processing": {
+    "cbz": {
+      "default": false,
+      "description": "Store downloaded files in a CBZ archive"
+    },
+    "exec": {
+      "default": null,
+      "description": "Execute CMD for each downloaded file. Supported replacement fields are {} or {_path}, {_directory}, {_filename}. Example: --exec \"convert {} {}.png && rm {}\""
+    },
+    "exec-after": {
+      "default": null,
+      "description": "Execute CMD after all files were downloaded. Example: --exec-after \"cd {_directory} && convert * ../doc.pdf\""
+    },
+    "mtime": {
+      "default": null,
+      "description": "Set file modification times according to metadata selected by NAME. Examples: 'date' or 'status[date]'"
+    },
+    "no-postprocessors": {
+      "default": false,
+      "description": "Do not run any post processors"
+    },
+    "postprocessor": {
+      "default": null,
+      "description": "Activate the specified post processor"
+    },
+    "postprocessor-option": {
+      "default": {},
+      "description": "Additional post processor options"
+    },
+    "rename": {
+      "default": null,
+      "description": "Rename previously downloaded files from FORMAT to the current filename format"
+    },
+    "rename-to": {
+      "default": null,
+      "description": "Rename previously downloaded files from the current filename format to FORMAT"
+    },
+    "ugoira": {
+      "default": null,
+      "description": "Convert Pixiv Ugoira to FMT using FFmpeg. Supported formats are 'webm', 'mp4', 'gif', 'vp8', 'vp9', 'vp9-lossless', 'copy', 'zip'."
+    },
+    "write-info-json": {
+      "default": false,
+      "description": "Write gallery metadata to a info.json file"
+    },
+    "write-metadata": {
+      "default": false,
+      "description": "Write metadata to separate JSON files"
+    },
+    "write-tags": {
+      "default": false,
+      "description": "Write image tags to separate text files"
+    },
+    "zip": {
+      "default": false,
+      "description": "Store downloaded files in a ZIP archive"
+    }
+  }
+}
