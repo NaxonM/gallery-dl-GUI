@@ -6,6 +6,7 @@ import qdarktheme
 from .config import Config
 from .downloader import ensure_gallery_dl
 from .settings import SettingsDialog
+from .downloads import DownloadsTab
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -21,7 +22,8 @@ class MainWindow(QtWidgets.QMainWindow):
         tabs = QtWidgets.QTabWidget()
         self.setCentralWidget(tabs)
 
-        tabs.addTab(QtWidgets.QWidget(), "Downloads")
+        downloads_tab = DownloadsTab(self._config.gallery_dl_path)
+        tabs.addTab(downloads_tab, "Downloads")
         tabs.addTab(QtWidgets.QWidget(), "Options")
         tabs.addTab(QtWidgets.QWidget(), "History/Logs")
 
